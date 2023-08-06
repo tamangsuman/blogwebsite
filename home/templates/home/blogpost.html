@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% block body %}
+<div class="container">
+    <h1 class="display-4">{{post.title}}</h1>
+    <img src="{{post.image.url}}" alt="Blog Post Image" class="img-fluid">
+    <p class="text-muted">{{post.timestamp}} by {{post.author}}</p>
+    
+    <div class="post-content">
+      <p>{{post.content | safe }}</p>
+    </div>
+  </div>
+{% endblock body %}

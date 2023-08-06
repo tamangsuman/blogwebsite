@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %}
+
+{% block title %} contact {% endblock title %}
+{% block contactactive %}active{% endblock contactactive %}
+
+{% block body %}
+<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> -->
+
+
+
+<div class="container">
+    <form  method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          aria-describedby="name"
+          name="name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control" id="phone" name="phone" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="email"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="content" class="form-label">Describe your issue:</label>
+        <textarea
+          name="content"
+          id="content"
+          cols="30"
+          rows="5"
+          class="form-control"
+        ></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+
+
+
+
+{% endblock body %}

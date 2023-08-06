@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+{% block body %}
+<h2><center>Your Searched Results</center></h2>
+{% for i in allpost %}
+<div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{i.image.url}}" class="card-img img-thumbnail" alt="Blog Image" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{i.title}}</h5>
+          <p class="card-text">{{ i.content | safe | truncatechars_html:300 }}</p>
+          <a href="/blogpost/{{i.slug}}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock body %} 
+

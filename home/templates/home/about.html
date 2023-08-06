@@ -1,0 +1,123 @@
+{% extends 'home/base.html' %}
+{% block title %} about {% endblock title %}
+{% block aboutactive %}active{% endblock aboutactive %}
+{% block body %}
+<style>
+    /* Reset some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 40px 0;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 20px;
+  color: #666;
+}
+
+/* About Me Section Styles */
+.about-me {
+  margin-top: 40px;
+}
+
+.about-me h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Contact Section Styles */
+.contact {
+  margin-top: 40px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.contact li {
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<header class="header">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>Web Developer | UI/UX Designer</p>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section class="about-me">
+    <div class="container">
+      <h2>About Me</h2>
+      <img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+      <p>
+        Hello! I'm Your Name, a passionate web developer and UI/UX designer based in [Your Location]. 
+        I love creating beautiful and functional websites that deliver great user experiences.
+        With [number] years of experience in the industry, I have worked on various projects and gained expertise in [your skills].
+      </p>
+      <p>
+        When I'm not coding, you can find me exploring new technologies, reading tech blogs, or playing guitar. 
+        I believe in continuous learning and always strive to stay up-to-date with the latest web trends and technologies.
+      </p>
+      <!-- Add more information about yourself here -->
+    </div>
+  </section>
+
+  <!-- Contact Section (Optional) -->
+  <section class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you want to discuss a project or just say hi, feel free to get in touch with me:</p>
+      <ul>
+        <li>Email: yourname@example.com</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/yourname/" target="_blank">linkedin.com/in/yourname/</a></li>
+        <!-- Add more contact information as needed -->
+      </ul>
+    </div>
+  </section>
+{% endblock body %}
